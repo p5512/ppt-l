@@ -1,10 +1,15 @@
+*{
+    list-style:none;
+    color:#ccc;
+
+}
 html, 
 body,
 .wrapper,
 .wrapper .slider-list,
 .slider-list .slider{
-    width:100px;
-    height:100px;
+    width:100%;
+    height:100%;
 
 }
 
@@ -12,7 +17,8 @@ body,
     position: relative;
 }
 .wrapper .slider-list{
-
+width:100%;
+height:100%;
 }
  .slider-list .slider{
      left:0;
@@ -53,13 +59,76 @@ width:40%;
 
 .slider .slider-img{
     float:right;
-    width:100%;
+    width:0%;
 
+}
+
+.slider:nth-of-type(1) .slider-img{
+    width:40%;
 }
 
 .slider-img img{
     width:100%;
 
 }
+
+ .slider-btn{
+    position: absolute;
+    width:100%;
+    height:40px;
+    top:50%;
+    margin-top:-20px;
+
+}
+.slider-btn span{
+    display:inline-block;
+    position: absolute;
+    height:40px;
+    width:28px;
+}
+.slider-btn .prev-btn{
+    left:50px;
+    background-image:url('../img/left-arrow.png') 
+}
+.slider-btn .next-btn{
+    right:50px;
+    background-image:url('../img/right-arrow.png') 
+}
+.slider-point{
+    position: absolute;
+    bottom:100px;
+    width:100%;
+    height:20px;
+
+}
+.slider-point ul{
+    position: absolute;
+    /* display:inline-block; */
+    height:20px;
+    left:50%;
+    transform: translateX(-50%)
+
+}
+
+.slider-point ul li{
+    width:20px;
+    height:20px;
+    background:#aaa;
+    border-radius:50%;
+    display:inline-block;
+    margin-right:10px;
+    text-align:center;
+    line-height:20px;
+}
+.slider-point ul li:last-child{
+    margin-right:0;
+}
+.slider-point ul li.active{
+    color:red;
+}
+
+
+
+
 
 
